@@ -222,7 +222,7 @@ if __name__ == "__main__":
     thread_list = []
 
 
-    for t in range(args.n_threads):
+    for t in range(int(args.n_threads)):
         t = threading.Thread(target=request_handler,)
         thread_list.append(t)
         t.daemon = True
