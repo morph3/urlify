@@ -157,7 +157,7 @@ def request_handler():
 
         except IndexError:
             running = False
-            break
+            continue
 
         ports = None
         if args.ports == "large":
@@ -181,7 +181,6 @@ def request_handler():
             display_requests(http_response,https_response)
 
         #print(f"Doing https_request for {sub}")
-        return
     return
 
 if __name__ == "__main__":
